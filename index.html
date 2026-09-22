@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laya — Base meme coin</title>
+  <meta name="description" content="Laya is a Base meme coin. Electric glass, an open orbit, and a single buy button.">
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <div class="glow glow-c"></div>
+    <div class="shard shard-a"></div>
+    <div class="shard shard-b"></div>
+    <div class="shard shard-c"></div>
+    <div class="shard shard-d"></div>
+    <div class="shard shard-e"></div>
+    <canvas id="dust"></canvas>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="pointer" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="">
+        <span>Laya</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#signal">Signal</a>
+        <a href="#mark">The Mark</a>
+        <a href="#supply">Supply</a>
+        <a href="#buy">How to buy</a>
+        <a href="#join">Join us</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-glass" data-link="dex" href="https://dexscreener.com/base" target="_blank" rel="noopener noreferrer">
+          <img src="icons/dexscreener.svg" alt="">
+          Chart
+        </a>
+        <a class="btn btn-buy" data-link="uniswap" href="https://app.uniswap.org/swap?chain=base" target="_blank" rel="noopener noreferrer">
+          <span class="chip"><img src="icons/uniswap.svg" alt=""></span>
+          Buy $LAYA
+        </a>
+      </div>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="scan" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="mark-stage">
+          <div class="ring ring-a"><i></i></div>
+          <div class="ring ring-b"><i></i><b></b></div>
+          <div class="halo"></div>
+          <img class="hero-logo" src="logo.png" alt="Laya logo">
+        </div>
+        <div class="hero-copy">
+          <div class="kicker">
+            <span class="live"></span>
+            Signal live · Base
+          </div>
+          <h1>Laya <em>Research</em></h1>
+          <p class="lede">A Base meme cut from wet glass and midnight blue. The crescent never closes. The spiral keeps taking samples. You just buy the orbit.</p>
+          <div class="hero-actions">
+            <a class="btn btn-buy btn-lg" data-link="uniswap" href="https://app.uniswap.org/swap?chain=base" target="_blank" rel="noopener noreferrer">
+              <span class="chip"><img src="icons/uniswap.svg" alt=""></span>
+              Buy on Uniswap
+            </a>
+            <a class="btn btn-glass btn-lg" data-link="dex" href="https://dexscreener.com/base" target="_blank" rel="noopener noreferrer">
+              <img src="icons/dexscreener.svg" alt="">
+              Dexscreener
+            </a>
+            <a class="btn btn-icon" data-link="x" href="https://x.com/LayaonBase" target="_blank" rel="noopener noreferrer" aria-label="Laya on X">
+              <img src="icons/x.svg" alt="">
+            </a>
+            <a class="btn btn-icon" data-link="telegram" href="https://t.me" target="_blank" rel="noopener noreferrer" aria-label="Laya on Telegram">
+              <img src="icons/telegram.svg" alt="">
+            </a>
+            <a class="btn btn-icon" data-link="explorer" href="https://base.blockscout.com" target="_blank" rel="noopener noreferrer" aria-label="View on Blockscout">
+              <img src="icons/blockscout.svg" alt="">
+            </a>
+          </div>
+          <button class="ca" id="ca" type="button">
+            <span class="ca-k">Contract</span>
+            <span class="ca-v" id="ca-label">Announcing on Base</span>
+            <span class="ca-go" id="ca-go">Copy</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Laya Research</span><span>$LAYA</span><span>Base</span><span>Zero tax</span><span>Open orbit</span><span>Glass lab</span>
+        <span>Laya Research</span><span>$LAYA</span><span>Base</span><span>Zero tax</span><span>Open orbit</span><span>Glass lab</span>
+      </div>
+    </div>
+
+    <section class="section" id="signal">
+      <div class="section-head reveal">
+        <p class="eyebrow">Signal</p>
+        <h2>Field notes from an unfinished orbit.</h2>
+      </div>
+      <div class="signal-grid">
+        <article class="panel quote reveal">
+          <p>Every candle is a sample. Every wick is a hypothesis. The lab does not dim the lights when the chart gets loud.</p>
+          <footer>
+            <img src="logo.png" alt="">
+            <div>
+              <strong>Laya</strong>
+              <span>$LAYA · Base</span>
+            </div>
+          </footer>
+        </article>
+        <div class="notes">
+          <article class="panel note reveal">
+            <span class="idx">01</span>
+            <h3>Open on purpose</h3>
+            <p>The mark stops short of a circle. Motion is the product. A closed loop would be a finished experiment, and this one is still running.</p>
+          </article>
+          <article class="panel note reveal">
+            <span class="idx">02</span>
+            <h3>Glass, not noise</h3>
+            <p>Midnight navy, rim-lit panes, and a cold blue highlight. The same finish as the banner, stretched across a whole trading floor.</p>
+          </article>
+          <article class="panel note reveal">
+            <span class="idx">03</span>
+            <h3>Native to Base</h3>
+            <p>One pool. One chain. Uniswap to enter, Dexscreener to watch, Blockscout when you want the raw ledger.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mark">
+      <div class="section-head reveal">
+        <p class="eyebrow">The mark</p>
+        <h2>Three parts. One instrument.</h2>
+      </div>
+      <div class="mark-grid">
+        <article class="panel piece reveal">
+          <div class="glyph crescent" aria-hidden="true"></div>
+          <h3>Crescent</h3>
+          <p>A single glossy stroke. Thick through the belly, bright on the rim, ending before it can seal itself.</p>
+        </article>
+        <article class="panel piece reveal">
+          <div class="glyph spiral" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <h3>Spiral</h3>
+          <p>Orbs that leave the center and grow. Readings, not decoration. The farther they travel, the louder they get.</p>
+        </article>
+        <article class="panel piece reveal">
+          <div class="glyph pane" aria-hidden="true"></div>
+          <h3>Glass</h3>
+          <p>Rounded panes with a cold edge. They frame the name the way a lens frames a specimen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section supply" id="supply">
+      <div class="watermark" aria-hidden="true">Laya</div>
+      <div class="section-head reveal">
+        <p class="eyebrow">Supply</p>
+        <h2>One billion samples.</h2>
+      </div>
+      <div class="supply-layout">
+        <div class="panel supply-hero reveal">
+          <span class="supply-k">Total supply</span>
+          <strong data-count="1000000000">1,000,000,000</strong>
+          <span class="ticker">$LAYA</span>
+          <div class="meters" aria-hidden="true">
+            <div><span style="--p:92%"></span><em>Liquidity</em></div>
+            <div><span style="--p:8%"></span><em>Community</em></div>
+          </div>
+        </div>
+        <ul class="facts">
+          <li class="panel reveal">
+            <span>Buy / sell tax</span>
+            <strong>0% / 0%</strong>
+          </li>
+          <li class="panel reveal">
+            <span>Chain</span>
+            <strong class="with-icon"><img src="icons/base.svg" alt="">Base</strong>
+          </li>
+          <li class="panel reveal">
+            <span>Liquidity</span>
+            <strong>Burned at launch</strong>
+          </li>
+          <li class="panel reveal">
+            <span>Presale</span>
+            <strong>None</strong>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="buy">
+      <div class="section-head reveal">
+        <p class="eyebrow">How to buy</p>
+        <h2>Four steps into the pool.</h2>
+      </div>
+      <ol class="steps">
+        <li class="panel reveal">
+          <span>01</span>
+          <h3>Open a wallet</h3>
+          <p>Use a wallet that speaks Base. MetaMask, Coinbase Wallet, or Rainbow all qualify.</p>
+        </li>
+        <li class="panel reveal">
+          <span>02</span>
+          <h3>Fund Base ETH</h3>
+          <p>Bridge or withdraw a little ETH onto Base. Gas here is a whisper, not a toll.</p>
+        </li>
+        <li class="panel reveal">
+          <span>03</span>
+          <h3>Swap for $LAYA</h3>
+          <p>Open Uniswap, select Base, and trade ETH for Laya once the contract is live.</p>
+          <a class="btn btn-buy" data-link="uniswap" href="https://app.uniswap.org/swap?chain=base" target="_blank" rel="noopener noreferrer">
+            <span class="chip"><img src="icons/uniswap.svg" alt=""></span>
+            Buy
+          </a>
+        </li>
+        <li class="panel reveal">
+          <span>04</span>
+          <h3>Watch the orbit</h3>
+          <p>Pin the chart. The spiral is easier to read when you can see every sample.</p>
+          <a class="btn btn-glass" data-link="dex" href="https://dexscreener.com/base" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="">
+            Chart
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section join" id="join">
+      <div class="section-head reveal">
+        <p class="eyebrow">Join us</p>
+        <h2>The lab door is glass.</h2>
+        <p class="sub">Charts, chat, and the buy button. Pull up a stool. The orbit has room.</p>
+      </div>
+      <figure class="banner reveal">
+        <img src="banner.png" alt="Laya Research">
+      </figure>
+      <div class="join-row reveal">
+        <a class="btn btn-buy btn-lg" data-link="uniswap" href="https://app.uniswap.org/swap?chain=base" target="_blank" rel="noopener noreferrer">
+          <span class="chip"><img src="icons/uniswap.svg" alt=""></span>
+          Buy on Uniswap
+        </a>
+        <a class="btn btn-glass btn-lg" data-link="dex" href="https://dexscreener.com/base" target="_blank" rel="noopener noreferrer">
+          <img src="icons/dexscreener.svg" alt="">
+          Dexscreener
+        </a>
+        <a class="btn btn-glass btn-lg" data-link="x" href="https://x.com/LayaonBase" target="_blank" rel="noopener noreferrer">
+          <img src="icons/x.svg" alt="">
+          X
+        </a>
+        <a class="btn btn-glass btn-lg" data-link="telegram" href="https://t.me" target="_blank" rel="noopener noreferrer">
+          <img src="icons/telegram.svg" alt="">
+          Telegram
+        </a>
+        <a class="btn btn-glass btn-lg" data-link="explorer" href="https://base.blockscout.com" target="_blank" rel="noopener noreferrer">
+          <img src="icons/blockscout.svg" alt="">
+          Blockscout
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="">
+        <span>Laya</span>
+      </a>
+      <p>$LAYA is a meme coin on Base. It is not a promise of profit, not a laboratory product, and not financial advice. Trade only what you can watch disappear.</p>
+      <div class="footer-links">
+        <a data-link="uniswap" href="https://app.uniswap.org/swap?chain=base" target="_blank" rel="noopener noreferrer">Uniswap</a>
+        <a data-link="dex" href="https://dexscreener.com/base" target="_blank" rel="noopener noreferrer">Dexscreener</a>
+        <a data-link="x" href="https://x.com/LayaonBase" target="_blank" rel="noopener noreferrer">X</a>
+        <a data-link="telegram" href="https://t.me" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a data-link="explorer" href="https://base.blockscout.com" target="_blank" rel="noopener noreferrer">Blockscout</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="dock">
+    <a class="btn btn-buy" data-link="uniswap" href="https://app.uniswap.org/swap?chain=base" target="_blank" rel="noopener noreferrer">
+      <span class="chip"><img src="icons/uniswap.svg" alt=""></span>
+      Buy
+    </a>
+    <a class="btn btn-glass" data-link="dex" href="https://dexscreener.com/base" target="_blank" rel="noopener noreferrer">
+      <img src="icons/dexscreener.svg" alt="">
+      Chart
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
