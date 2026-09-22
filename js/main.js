@@ -1,4 +1,4 @@
-const CONTRACT = "";
+const CONTRACT = "0x62eddfabae221191768ef16959cc66b7f93f391a";
 
 const links = {
   uniswap: CONTRACT
@@ -22,8 +22,7 @@ const label = document.getElementById("ca-label");
 const go = document.getElementById("ca-go");
 const ca = document.getElementById("ca");
 if (CONTRACT) {
-  const short = `${CONTRACT.slice(0, 6)}…${CONTRACT.slice(-4)}`;
-  label.textContent = short;
+  label.textContent = CONTRACT;
   ca.title = CONTRACT;
 } else {
   go.textContent = "Soon";
