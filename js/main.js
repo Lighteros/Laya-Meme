@@ -8,7 +8,6 @@ const links = {
     ? `https://dexscreener.com/base/${CONTRACT}`
     : "https://dexscreener.com/base",
   x: "https://x.com/LayaonBase",
-  telegram: "https://t.me",
   explorer: CONTRACT
     ? `https://base.blockscout.com/token/${CONTRACT}`
     : "https://base.blockscout.com",
